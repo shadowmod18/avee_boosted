@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Utilisateur</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(to bottom, #1DA1F2, #ffffff);
+            background-attachment: fixed;
+            transition: background 0.5s ease;
+            overflow-x: hidden;
+        }
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background-color: transparent;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header img {
+            border-radius: 50%;
+            width: 100px;
+            height: 100px;
+            animation: bounceIn 2s ease-in-out;
+        }
+        .header h1 {
+            margin: 10px 0;
+            font-size: 24px;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header .username {
+            font-size: 18px;
+            color: #555;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header .username .badge {
+            background-color: #1DA1F2;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 6px;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+        .header .followers {
+            font-size: 24px;
+            color: #000;
+            margin: 5px 0;
+            text-align: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header .followers .count {
+            font-weight: bold;
+            display: block;
+        }
+        .header .followers span {
+            font-size: 14px;
+            color: #777;
+        }
+        .header .creator {
+            font-size: 16px;
+            color: #1DA1F2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation: fadeIn 2s ease-in-out;
+        }
+        .header .creator .badge {
+            color: #FFD700;
+            margin-left: 8px;
+            font-size: 14px;
+        }
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 20px;
+            background-color: transparent;
+            padding: 20px;
+        }
+        .buttons .button {
+            background-color: rgba(255, 255, 255, 0.8);
+            border: 2px solid #ddd;
+            border-radius: 40px;
+            width: 200px;
+            height: 60px;
+            margin: 10px 0;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 10px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            text-decoration: none;
+            color: #555;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            animation: slideIn 2s ease-in-out;
+        }
+        .buttons .button:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+        .buttons .button img {
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            margin-right: 10px;
+        }
+        .buttons .button span {
+            font-size: 16px;
+            color: #555;
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes bounceIn {
+            0%, 20%, 40%, 60%, 80%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        @keyframes slideIn {
+            from {
+                transform: translateX(-100%);
+            }
+            to {
+                transform: translateX(0);
+            }
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-100px);
+                opacity: 1;
+            }
+            80% {
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+        .particle {
+            position: absolute;
+            top: -100px;
+            width: 40px;
+            height: 40px;
+            background-image: url('https://www.freeiconspng.com/uploads/headphones-png-3.png'); /* Remplacez par le lien de votre image de casque */
+            background-size: cover;
+            animation: fall 20s linear forwards;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <img src="https://i.imgur.com/FRqzhfQ.jpeg" alt="Logo">
+        <h1>Avee Boosted</h1>
+        <div class="username">
+            @avee_boosted
+            <span class="badge">✔</span>
+        </div>
+        <div class="followers">
+            <span class="count">18,2 K</span>
+            <span>Followers</span>
+        </div>
+        <div class="creator">
+            Visualiser Creator
+            <span class="badge">⭐</span>
+        </div>
+    </div>
+    <div class="buttons">
+        <a href="https://vm.tiktok.com/ZGde18CvL/" class="button">
+            <img src="https://i.imgur.com/ftX9bQw.jpeg" alt="Image 1">
+            <span>Subscription</span>
+        </a>
+        <a href="https://www.buildai.space/app/aveeai-app" class="button">
+            <img src="https://i.imgur.com/FRqzhfQ.jpeg" alt="Image 2">
+            <span>AVEE.AI</span>
+        </a>
+        <a href="https://t.me/avee_boosted" class="button">
+            <img src="https://logospng.org/download/telegram/logo-telegram-4096.png" alt="Image 3">
+            <span>Telegram</span>
+        </a>
+        <a href="https://www.instagram.com/invites/contact/?i=1esz70628fr6&utm_content=l6iguid" class="button">
+            <img src="https://th.bing.com/th/id/R.e323a1c490acd8ad3f84d1d1a6d78c9a?rik=pefjyka5%2fJ2tYA&pid=ImgRaw&r=0" alt="Image 4">
+            <span>Instagram</span>
+        </a>
+        <a href="https://www.youtube.com/channel/UCnw0VdeKenJLUZp9V3ddXRA" class="button">
+            <img src="https://1.bp.blogspot.com/-hY5-pNrOcKw/XeI_00cpCgI/AAAAAAAAF4A/J7jS49V8kNozycy0PgY6wfc7SUU9gulTgCLcBGAsYHQ/s1600/Youtube-Icon-square-2340x2340.png" alt="Image 5">
+            <span>Youtube</span>
+        </a>
+        <a href="https://www.tiktok.com/@avee_boosted" class="button">
+            <img src="https://th.bing.com/th/id/OIP.SmkemBJ2Ip8ca9IRfvyCqwHaHa?rs=1&pid=ImgDetMain" alt="Image 6">
+            <span>TikTok</span>
+        </a>
+    </div>
+    <script>
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.className = 'particle';
+            particle.style.left = Math.random() * 100 + 'vw';
+            document.body.appendChild(particle);
+            setTimeout(() => {
+                particle.remove();
+            }, 20000);
+        }
+
+        for (let i = 0; i < 100; i++) {
+            setTimeout(createParticle, Math.random() * 20000);
+        }
+    </script>
+</body>
+</html>
